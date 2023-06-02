@@ -1,8 +1,12 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <OptionsComp v-if="isOptionsShown" @hideOptions="switchOptionsVisibility" />
-      <WeatherPage v-if="!isOptionsShown" @showOptions="switchOptionsVisibility" />
+      <OptionsComp
+        v-if="isOptionsShown"
+        @hideOptions="switchOptionsVisibility" />
+      <WeatherPage
+        v-if="!isOptionsShown"
+        @showOptions="switchOptionsVisibility" />
     </div>
   </div>
 </template>
@@ -13,7 +17,7 @@ import WeatherPage from "@/pages/WeatherPage.vue";
 import { mapGetters } from "vuex";
 
 export default {
-  name: "weather-widget",
+  name: "openweather-widgetsw",
   components: {
     OptionsComp,
     WeatherPage,
